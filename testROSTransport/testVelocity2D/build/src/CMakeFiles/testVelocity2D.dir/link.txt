@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,testVelocity2D.so -o testVelocity2D.so CMakeFiles/testVelocity2D.dir/testVelocity2D.cpp.o  -lpthread -lRTC2 -lomniDynamic4 -lomniORB4 -lomnithread -lrtmCamera2 -lrtmManipulator2 

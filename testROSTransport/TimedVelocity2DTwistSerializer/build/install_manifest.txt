@@ -1,0 +1,1 @@
+/usr/local/lib/openrtm-2.0/transport/TimedVelocity2DTwistSerializer.so

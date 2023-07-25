@@ -1,0 +1,157 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3,
+						5
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "cmake",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "cmake"
+				},
+				{
+					"build" : "idl",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "idl"
+				},
+				{
+					"build" : "include",
+					"childIndexes" : 
+					[
+						4
+					],
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "include"
+				},
+				{
+					"build" : "include/testVelocity2D",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 0,
+					"source" : "include/testVelocity2D"
+				},
+				{
+					"build" : "src",
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "src",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					],
+					"name" : "testVelocity2D",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 5,
+					"id" : "ALL_IDL_TGT::@145eef247bfb46b6828c",
+					"jsonFile" : "target-ALL_IDL_TGT-Debug-af380af10a86e5c4506b.json",
+					"name" : "ALL_IDL_TGT",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "testVelocity2D::@145eef247bfb46b6828c",
+					"jsonFile" : "target-testVelocity2D-Debug-e4ebed1bc5d84556666d.json",
+					"name" : "testVelocity2D",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "testVelocity2DComp::@145eef247bfb46b6828c",
+					"jsonFile" : "target-testVelocity2DComp-Debug-86fec758a0a20d351279.json",
+					"name" : "testVelocity2DComp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "testVelocity2D_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testVelocity2D_uninstall-Debug-fa652deed7aad56e0dc9.json",
+					"name" : "testVelocity2D_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/ntlab/workspace/testROSTransport/testVelocity2D/build",
+		"source" : "/home/ntlab/workspace/testROSTransport/testVelocity2D"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rtc:RtcProfile rtc:version="0.3" rtc:id="RTC:AIST:Test:testVelocity2D:1.0.0" xmlns:rtc="http://www.openrtp.org/namespaces/rtc" xmlns:rtcExt="http://www.openrtp.org/namespaces/rtc_ext" xmlns:rtcDoc="http://www.openrtp.org/namespaces/rtc_doc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rtc:BasicInfo xsi:type="rtcExt:basic_info_ext" rtcExt:saveProject="testVelocity2D" rtc:updateDate="2023-07-13T20:31:35.000+09:00" rtc:creationDate="2023-07-13T20:20:30.000+09:00" rtc:abstract="TimedVelocity2D型のOutPortのデータを出力するコンポーネント" rtc:version="1.0.0" rtc:vendor="AIST" rtc:maxInstances="1" rtc:executionType="PeriodicExecutionContext" rtc:executionRate="1000.0" rtc:description="Test TimedVelocity2D OutPort Component" rtc:category="Test" rtc:componentKind="DataFlowComponent" rtc:activityType="PERIODIC" rtc:componentType="STATIC" rtc:name="testVelocity2D">
+        <rtcDoc:Doc rtcDoc:reference="" rtcDoc:license="LGPL" rtcDoc:creator="" rtcDoc:algorithm="" rtcDoc:inout="" rtcDoc:description="TimedVelocity2D型のOutPortのデータを出力するコンポーネント"/>
+    </rtc:BasicInfo>
+    <rtc:Actions>
+        <rtc:OnInitialize xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
+        <rtc:OnFinalize xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnStartup xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnShutdown xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnActivated xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnDeactivated xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnAborting xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnError xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnReset xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnExecute xsi:type="rtcDoc:action_status_doc" rtc:implemented="true"/>
+        <rtc:OnStateUpdate xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+        <rtc:OnRateChanged xsi:type="rtcDoc:action_status_doc" rtc:implemented="false"/>
+    </rtc:Actions>
+    <rtc:ConfigurationSet>
+        <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="" rtc:unit="m/s" rtc:defaultValue="0.0" rtc:type="double" rtc:name="speed_x">
+            <rtc:Constraint>
+                <rtc:ConstraintUnitType>
+                    <rtc:And>
+                        <rtc:Constraint>
+                            <rtc:ConstraintUnitType>
+                                <rtc:propertyIsGreaterThan rtc:matchCase="false">
+                                    <rtc:Literal>-10.0</rtc:Literal>
+                                </rtc:propertyIsGreaterThan>
+                            </rtc:ConstraintUnitType>
+                        </rtc:Constraint>
+                        <rtc:Constraint>
+                            <rtc:ConstraintUnitType>
+                                <rtc:propertyIsLessThan rtc:matchCase="false">
+                                    <rtc:Literal>10.0</rtc:Literal>
+                                </rtc:propertyIsLessThan>
+                            </rtc:ConstraintUnitType>
+                        </rtc:Constraint>
+                    </rtc:And>
+                </rtc:ConstraintUnitType>
+            </rtc:Constraint>
+            <rtcDoc:Doc rtcDoc:constraint="-10.0&lt;x&lt;10.0" rtcDoc:range="" rtcDoc:unit="m/s" rtcDoc:description="outから出力するX軸方向の直進速度を設定する。" rtcDoc:defaultValue="0.0" rtcDoc:dataname="speed_x"/>
+            <rtcExt:Properties rtcExt:value="slider.0.1" rtcExt:name="__widget__"/>
+        </rtc:Configuration>
+        <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="" rtc:unit="m/s" rtc:defaultValue="0.0" rtc:type="double" rtc:name="speed_y">
+            <rtc:Constraint>
+                <rtc:ConstraintUnitType>
+                    <rtc:And>
+                        <rtc:Constraint>
+                            <rtc:ConstraintUnitType>
+                                <rtc:propertyIsGreaterThan rtc:matchCase="false">
+                                    <rtc:Literal>-10.0</rtc:Literal>
+                                </rtc:propertyIsGreaterThan>
+                            </rtc:ConstraintUnitType>
+                        </rtc:Constraint>
+                        <rtc:Constraint>
+                            <rtc:ConstraintUnitType>
+                                <rtc:propertyIsLessThan rtc:matchCase="false">
+                                    <rtc:Literal>10.0</rtc:Literal>
+                                </rtc:propertyIsLessThan>
+                            </rtc:ConstraintUnitType>
+                        </rtc:Constraint>
+                    </rtc:And>
+                </rtc:ConstraintUnitType>
+            </rtc:Constraint>
+            <rtcDoc:Doc rtcDoc:constraint="-10.0&lt;x&lt;10.0" rtcDoc:range="" rtcDoc:unit="m/s" rtcDoc:description="outから出力するY軸方向の直進速度を設定する。" rtcDoc:defaultValue="0.0" rtcDoc:dataname="speed_y"/>
+            <rtcExt:Properties rtcExt:value="slider.0.1" rtcExt:name="__widget__"/>
+        </rtc:Configuration>
+        <rtc:Configuration xsi:type="rtcExt:configuration_ext" rtcExt:variableName="" rtc:unit="rad/s" rtc:defaultValue="0.0" rtc:type="double" rtc:name="speed_r">
+            <rtc:Constraint>
+                <rtc:ConstraintUnitType>
+                    <rtc:And>
+                        <rtc:Constraint>
+                            <rtc:ConstraintUnitType>
+                                <rtc:propertyIsGreaterThan rtc:matchCase="false">
+                                    <rtc:Literal>-3.0</rtc:Literal>
+                                </rtc:propertyIsGreaterThan>
+                            </rtc:ConstraintUnitType>
+                        </rtc:Constraint>
+                        <rtc:Constraint>
+                            <rtc:ConstraintUnitType>
+                                <rtc:propertyIsLessThan rtc:matchCase="false">
+                                    <rtc:Literal>3.0</rtc:Literal>
+                                </rtc:propertyIsLessThan>
+                            </rtc:ConstraintUnitType>
+                        </rtc:Constraint>
+                    </rtc:And>
+                </rtc:ConstraintUnitType>
+            </rtc:Constraint>
+            <rtcDoc:Doc rtcDoc:constraint="-3.0&lt;x&lt;3.0" rtcDoc:range="" rtcDoc:unit="rad/s" rtcDoc:description="outから出力する回転速度を設定する。" rtcDoc:defaultValue="0.0" rtcDoc:dataname="speed_r"/>
+            <rtcExt:Properties rtcExt:value="slider.0.1" rtcExt:name="__widget__"/>
+        </rtc:Configuration>
+    </rtc:ConfigurationSet>
+    <rtc:DataPorts xsi:type="rtcExt:dataport_ext" rtcExt:position="RIGHT" rtcExt:variableName="" rtc:unit="" rtc:subscriptionType="" rtc:dataflowType="" rtc:interfaceType="" rtc:idlFile="&lt;RTM_ROOT&gt;\rtm\idl\ExtendedDataTypes.idl" rtc:type="RTC::TimedVelocity2D" rtc:name="out" rtc:portType="DataOutPort">
+        <rtcDoc:Doc rtcDoc:operation="" rtcDoc:occerrence="" rtcDoc:unit="m/s, rad/s" rtcDoc:semantics="" rtcDoc:number="" rtcDoc:type="RTC::TimedVelocity2D" rtcDoc:description="コンフィギュレーションパラメータで設定した速度をTimedVelocity2D型で出力する。"/>
+    </rtc:DataPorts>
+    <rtc:Language xsi:type="rtcExt:language_ext" rtc:kind="C++"/>
+</rtc:RtcProfile>

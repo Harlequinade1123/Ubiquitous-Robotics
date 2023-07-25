@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/ntlab/workspace/testROSTransport/testVelocity2D/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/testROSTransport/testVelocity2D/include -I/home/ntlab/workspace/testROSTransport/testVelocity2D/include/testVelocity2D -I/home/ntlab/workspace/testROSTransport/testVelocity2D/build -I/home/ntlab/workspace/testROSTransport/testVelocity2D/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/testVelocity2DComp.dir/testVelocity2DComp.cpp.o -c /home/ntlab/workspace/testROSTransport/testVelocity2D/src/testVelocity2DComp.cpp",
+  "file": "/home/ntlab/workspace/testROSTransport/testVelocity2D/src/testVelocity2DComp.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/testROSTransport/testVelocity2D/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/testROSTransport/testVelocity2D/include -I/home/ntlab/workspace/testROSTransport/testVelocity2D/include/testVelocity2D -I/home/ntlab/workspace/testROSTransport/testVelocity2D/build -I/home/ntlab/workspace/testROSTransport/testVelocity2D/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/testVelocity2DComp.dir/testVelocity2D.cpp.o -c /home/ntlab/workspace/testROSTransport/testVelocity2D/src/testVelocity2D.cpp",
+  "file": "/home/ntlab/workspace/testROSTransport/testVelocity2D/src/testVelocity2D.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/testROSTransport/testVelocity2D/build/src",
+  "command": "/usr/bin/g++  -DtestVelocity2D_EXPORTS -I/home/ntlab/workspace/testROSTransport/testVelocity2D/include -I/home/ntlab/workspace/testROSTransport/testVelocity2D/include/testVelocity2D -I/home/ntlab/workspace/testROSTransport/testVelocity2D/build -I/home/ntlab/workspace/testROSTransport/testVelocity2D/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g -fPIC   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/testVelocity2D.dir/testVelocity2D.cpp.o -c /home/ntlab/workspace/testROSTransport/testVelocity2D/src/testVelocity2D.cpp",
+  "file": "/home/ntlab/workspace/testROSTransport/testVelocity2D/src/testVelocity2D.cpp"
+}
+]

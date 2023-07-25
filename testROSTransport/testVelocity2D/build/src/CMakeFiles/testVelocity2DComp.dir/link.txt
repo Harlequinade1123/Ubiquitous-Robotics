@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/testVelocity2DComp.dir/testVelocity2DComp.cpp.o CMakeFiles/testVelocity2DComp.dir/testVelocity2D.cpp.o  -o testVelocity2DComp  -lpthread -lRTC2 -lomniDynamic4 -lomniORB4 -lomnithread -lrtmCamera2 -lrtmManipulator2 
