@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/ntlab/workspace/MotionPlanner/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/MotionPlanner/include -I/home/ntlab/workspace/MotionPlanner/include/MotionPlanner -I/home/ntlab/workspace/MotionPlanner/build -I/home/ntlab/workspace/MotionPlanner/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/MotionPlannerComp.dir/MotionPlannerComp.cpp.o -c /home/ntlab/workspace/MotionPlanner/src/MotionPlannerComp.cpp",
+  "file": "/home/ntlab/workspace/MotionPlanner/src/MotionPlannerComp.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/MotionPlanner/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/MotionPlanner/include -I/home/ntlab/workspace/MotionPlanner/include/MotionPlanner -I/home/ntlab/workspace/MotionPlanner/build -I/home/ntlab/workspace/MotionPlanner/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/MotionPlannerComp.dir/MotionPlanner.cpp.o -c /home/ntlab/workspace/MotionPlanner/src/MotionPlanner.cpp",
+  "file": "/home/ntlab/workspace/MotionPlanner/src/MotionPlanner.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/MotionPlanner/build/src",
+  "command": "/usr/bin/g++  -DMotionPlanner_EXPORTS -I/home/ntlab/workspace/MotionPlanner/include -I/home/ntlab/workspace/MotionPlanner/include/MotionPlanner -I/home/ntlab/workspace/MotionPlanner/build -I/home/ntlab/workspace/MotionPlanner/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g -fPIC   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/MotionPlanner.dir/MotionPlanner.cpp.o -c /home/ntlab/workspace/MotionPlanner/src/MotionPlanner.cpp",
+  "file": "/home/ntlab/workspace/MotionPlanner/src/MotionPlanner.cpp"
+}
+]

@@ -1,0 +1,27 @@
+Jul 23 12:07:40.581 INFO: manager: 2.0.1
+Jul 23 12:07:40.581 INFO: manager: Copyright (C) 2003-2022, Noriaki Ando and OpenRTM development team,
+Jul 23 12:07:40.581 INFO: manager:   Intelligent Systems Research Institute, AIST,
+Jul 23 12:07:40.581 INFO: manager: Copyright (C) 2022, Noriaki Ando and OpenRTM development team,
+Jul 23 12:07:40.581 INFO: manager:   Industrial Cyber-Physical Research Center, AIST,
+Jul 23 12:07:40.581 INFO: manager:   All right reserved.
+Jul 23 12:07:40.581 INFO: manager: Manager starting.
+Jul 23 12:07:40.581 INFO: manager: Starting local logging.
+Jul 23 12:07:40.591 WARNING: NamingOnCorba: No endpoint for the CORBA naming service (localhost) was found.
+Jul 23 12:07:40.592 INFO: NamingManager: NameServer connection succeeded: corba/localhost
+Jul 23 12:07:40.592 INFO: ManagerServant: Named manager reference (INS) was successfully created.
+Jul 23 12:07:40.593 WARNING: ManagerServant: Master manager not found
+Jul 23 12:07:40.594 INFO: LocalServiceAdmin: All the local services are enabled.
+Jul 23 12:07:40.595 INFO: ec_base: setRate(1000000.000000) done
+Jul 23 12:07:40.595 INFO: ec_base: setRate(1000.000000) done
+Jul 23 12:07:40.595 INFO: DynamixelController0: 1 execution context was created.
+Jul 23 12:07:40.596 INFO: DynamixelController0: Initial active configuration set is default.
+Jul 23 12:07:50.493 WARNING: SdoServiceAdmin: No available SDO service in the factory: 
+Jul 23 12:07:50.609 INFO: ManagerServant: Master manager not found
+Jul 23 12:08:00.618 INFO: ManagerServant: Master manager not found
+Jul 23 12:08:10.627 INFO: ManagerServant: Master manager not found
+Jul 23 12:08:20.636 INFO: ManagerServant: Master manager not found
+Jul 23 12:08:30.648 INFO: ManagerServant: Master manager not found
+Jul 23 12:08:40.660 INFO: ManagerServant: Master manager not found
+Jul 23 12:08:50.669 INFO: ManagerServant: Master manager not found
+Jul 23 12:09:00.678 INFO: ManagerServant: Master manager not found
+Jul 23 12:09:10.688 INFO: ManagerServant: Master manager not found

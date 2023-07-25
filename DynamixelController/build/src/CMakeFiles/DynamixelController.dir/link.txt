@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,DynamixelController.so -o DynamixelController.so CMakeFiles/DynamixelController.dir/DynamixelController.cpp.o CMakeFiles/DynamixelController.dir/FourAxisArm.cpp.o CMakeFiles/DynamixelController.dir/SerialPort.cpp.o  -lpthread -lRTC2 -lomniDynamic4 -lomniORB4 -lomnithread -lrtmCamera2 -lrtmManipulator2 

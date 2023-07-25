@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/DynamixelControllerComp.dir/DynamixelControllerComp.cpp.o CMakeFiles/DynamixelControllerComp.dir/DynamixelController.cpp.o CMakeFiles/DynamixelControllerComp.dir/FourAxisArm.cpp.o CMakeFiles/DynamixelControllerComp.dir/SerialPort.cpp.o  -o DynamixelControllerComp  -lpthread -lRTC2 -lomniDynamic4 -lomniORB4 -lomnithread -lrtmCamera2 -lrtmManipulator2 

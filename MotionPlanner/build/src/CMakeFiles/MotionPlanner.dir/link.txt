@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,MotionPlanner.so -o MotionPlanner.so CMakeFiles/MotionPlanner.dir/MotionPlanner.cpp.o  -lpthread -lRTC2 -lomniDynamic4 -lomniORB4 -lomnithread -lrtmCamera2 -lrtmManipulator2 

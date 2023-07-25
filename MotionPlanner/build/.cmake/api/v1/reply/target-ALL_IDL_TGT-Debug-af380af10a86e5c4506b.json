@@ -1,0 +1,35 @@
+{
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target"
+		],
+		"files" : 
+		[
+			"src/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 0
+			}
+		]
+	},
+	"id" : "ALL_IDL_TGT::@145eef247bfb46b6828c",
+	"name" : "ALL_IDL_TGT",
+	"paths" : 
+	{
+		"build" : "src",
+		"source" : "src"
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}

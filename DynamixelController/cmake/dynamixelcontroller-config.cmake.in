@@ -1,0 +1,54 @@
+# DynamixelController CMake config file
+#
+# This file sets the following variables:
+# DynamixelController_FOUND - Always TRUE.
+# DynamixelController_INCLUDE_DIRS - Directories containing the DynamixelController include files.
+# DynamixelController_IDL_DIRS - Directories containing the DynamixelController IDL files.
+# DynamixelController_LIBRARIES - Libraries needed to use DynamixelController.
+# DynamixelController_DEFINITIONS - Compiler flags for DynamixelController.
+# DynamixelController_VERSION - The version of DynamixelController found.
+# DynamixelController_VERSION_MAJOR - The major version of DynamixelController found.
+# DynamixelController_VERSION_MINOR - The minor version of DynamixelController found.
+# DynamixelController_VERSION_REVISION - The revision version of DynamixelController found.
+# DynamixelController_VERSION_CANDIDATE - The candidate version of DynamixelController found.
+
+message(STATUS "Found DynamixelController-@PROJECT_VERSION@")
+set(DynamixelController_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(DynamixelController_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(DynamixelController_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(DynamixelController_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(DynamixelController_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(DynamixelController_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(DynamixelController_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(DynamixelController_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(DynamixelController_VERSION @PROJECT_VERSION@)
+set(DynamixelController_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(DynamixelController_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(DynamixelController_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(DynamixelController_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

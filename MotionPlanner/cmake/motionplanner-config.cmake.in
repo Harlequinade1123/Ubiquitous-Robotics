@@ -1,0 +1,54 @@
+# MotionPlanner CMake config file
+#
+# This file sets the following variables:
+# MotionPlanner_FOUND - Always TRUE.
+# MotionPlanner_INCLUDE_DIRS - Directories containing the MotionPlanner include files.
+# MotionPlanner_IDL_DIRS - Directories containing the MotionPlanner IDL files.
+# MotionPlanner_LIBRARIES - Libraries needed to use MotionPlanner.
+# MotionPlanner_DEFINITIONS - Compiler flags for MotionPlanner.
+# MotionPlanner_VERSION - The version of MotionPlanner found.
+# MotionPlanner_VERSION_MAJOR - The major version of MotionPlanner found.
+# MotionPlanner_VERSION_MINOR - The minor version of MotionPlanner found.
+# MotionPlanner_VERSION_REVISION - The revision version of MotionPlanner found.
+# MotionPlanner_VERSION_CANDIDATE - The candidate version of MotionPlanner found.
+
+message(STATUS "Found MotionPlanner-@PROJECT_VERSION@")
+set(MotionPlanner_FOUND TRUE)
+
+find_package(<dependency> REQUIRED)
+
+#set(MotionPlanner_INCLUDE_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@"
+#    ${<dependency>_INCLUDE_DIRS}
+#    )
+#
+#set(MotionPlanner_IDL_DIRS
+#    "@CMAKE_INSTALL_PREFIX@/include/@PROJECT_NAME_LOWER@-@PROJECT_VERSION_MAJOR@/idl")
+set(MotionPlanner_INCLUDE_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@"
+    ${<dependency>_INCLUDE_DIRS}
+    )
+set(MotionPlanner_IDL_DIRS
+    "@CMAKE_INSTALL_PREFIX@/include/@CPACK_PACKAGE_FILE_NAME@/idl")
+
+
+if(WIN32)
+    set(MotionPlanner_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_STATIC_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+else(WIN32)
+    set(MotionPlanner_LIBRARIES
+        "@CMAKE_INSTALL_PREFIX@/@LIB_INSTALL_DIR@/@CMAKE_SHARED_LIBRARY_PREFIX@@PROJECT_NAME_LOWER@@CMAKE_SHARED_LIBRARY_SUFFIX@"
+        ${<dependency>_LIBRARIES}
+        )
+endif(WIN32)
+
+set(MotionPlanner_DEFINITIONS ${<dependency>_DEFINITIONS})
+
+set(MotionPlanner_VERSION @PROJECT_VERSION@)
+set(MotionPlanner_VERSION_MAJOR @PROJECT_VERSION_MAJOR@)
+set(MotionPlanner_VERSION_MINOR @PROJECT_VERSION_MINOR@)
+set(MotionPlanner_VERSION_REVISION @PROJECT_VERSION_REVISION@)
+set(MotionPlanner_VERSION_CANDIDATE @PROJECT_VERSION_CANDIDATE@)
+

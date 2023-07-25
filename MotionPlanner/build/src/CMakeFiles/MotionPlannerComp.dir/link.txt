@@ -1,0 +1,1 @@
+/usr/bin/g++  -g   CMakeFiles/MotionPlannerComp.dir/MotionPlannerComp.cpp.o CMakeFiles/MotionPlannerComp.dir/MotionPlanner.cpp.o  -o MotionPlannerComp  -lpthread -lRTC2 -lomniDynamic4 -lomniORB4 -lomnithread -lrtmCamera2 -lrtmManipulator2 

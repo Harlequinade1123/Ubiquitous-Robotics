@@ -1,0 +1,37 @@
+[
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelControllerComp.dir/DynamixelControllerComp.cpp.o -c /home/ntlab/workspace/DynamixelController/src/DynamixelControllerComp.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/DynamixelControllerComp.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelControllerComp.dir/DynamixelController.cpp.o -c /home/ntlab/workspace/DynamixelController/src/DynamixelController.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/DynamixelController.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelControllerComp.dir/FourAxisArm.cpp.o -c /home/ntlab/workspace/DynamixelController/src/FourAxisArm.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/FourAxisArm.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++   -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelControllerComp.dir/SerialPort.cpp.o -c /home/ntlab/workspace/DynamixelController/src/SerialPort.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/SerialPort.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++  -DDynamixelController_EXPORTS -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g -fPIC   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelController.dir/DynamixelController.cpp.o -c /home/ntlab/workspace/DynamixelController/src/DynamixelController.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/DynamixelController.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++  -DDynamixelController_EXPORTS -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g -fPIC   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelController.dir/FourAxisArm.cpp.o -c /home/ntlab/workspace/DynamixelController/src/FourAxisArm.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/FourAxisArm.cpp"
+},
+{
+  "directory": "/home/ntlab/workspace/DynamixelController/build/src",
+  "command": "/usr/bin/g++  -DDynamixelController_EXPORTS -I/home/ntlab/workspace/DynamixelController/include -I/home/ntlab/workspace/DynamixelController/include/DynamixelController -I/home/ntlab/workspace/DynamixelController/build -I/home/ntlab/workspace/DynamixelController/build/idl -I/usr/include/coil-2.0 -I/usr/include/openrtm-2.0 -I/usr/include/openrtm-2.0/rtm/idl -I/usr/include/openrtm-2.0/rtm/ext  -g -fPIC   -Wall -fPIC -O2 -std=gnu++11 -o CMakeFiles/DynamixelController.dir/SerialPort.cpp.o -c /home/ntlab/workspace/DynamixelController/src/SerialPort.cpp",
+  "file": "/home/ntlab/workspace/DynamixelController/src/SerialPort.cpp"
+}
+]
