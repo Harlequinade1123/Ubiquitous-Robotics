@@ -42,7 +42,7 @@ public void setup()
     //ウィンドウサイズを設定
     size(800, 600);
 
-    util.createComponent("gui_command_sender");
+    util.createComponent("CommandSender");
     
     //データの初期化
     out_val.tm   = new Time();
@@ -108,16 +108,83 @@ public void setup()
         .setColorBackground(color(50, 50, 150))
         .setColorForeground(color(100, 100, 150))
         .setColorCaptionLabel(color(255, 255, 255));
-}
 
+    button.addToggle("mode_is_manual")
+        .setColorLabel(color(0))
+        .setLabel("MANUAL")
+        .setFont(cf1)
+        .setPosition(80,310)
+        .setSize(50,20)
+        .setValue(false);
+}
+boolean mode_is_manual = false;
 public void draw()
 {
     background(255);
     fill(0);
     textAlign(CENTER);
     textSize(72);
-    text(g_button_names[g_command], width / 2, 120);
-    if (isFetching || isReturning)
+    if (!mode_is_manual)
+    {
+        text(g_button_names[g_command], width / 2, 120);
+    }
+    else
+    {
+        text("↑↓←→:MOVE", width / 2, 100);
+        text("Z or X:TURN"     , width / 2, 160);
+        text("F    :FETCH"      , width / 2 + 55, 220);
+        text("R    :RETURN"     , width / 2 + 78, 280);
+        isFetching  = false;
+        isReturning = false;
+        isCanceled  = false;
+        g_progress = 0;
+
+        out_val.data = 100;
+        if (keyPressed)
+        {
+            if (keyCode == UP)
+            {
+                out_val.data = 101;
+            }
+            else if (keyCode == DOWN)
+            {
+                out_val.data = 102;
+            }
+            else if (keyCode == LEFT)
+            {
+                out_val.data = 103;
+            }
+            else if (keyCode == RIGHT)
+            {
+                out_val.data = 104;
+            }
+            else if (key == 'z' || key == 'Z')
+            {
+                out_val.data = 105;
+            }
+            else if (key == 'x' || key == 'X')
+            {
+                out_val.data = 106;
+            }
+            else if (key == 'f' || key == 'F')
+            {
+                out_val.data = 107;
+            }
+            else if (key == 'r' || key == 'R')
+            {
+                out_val.data = 108;
+            }
+        }
+        out_val.tm = new Time();
+        outport.write();
+        println("MANUAL:", out_val.data);
+        if (keyPressed && (key == 'r' || key == 'R' || key == 'f' || key == 'F'))
+        {
+            delay(20000);
+        }
+        delay(100);
+    }
+    if (!mode_is_manual && (isFetching || isReturning))
     {
         textSize(24);
         if (100 <= g_progress)
@@ -183,25 +250,25 @@ public void draw()
 
 void SCREW()
 {
-    if (!isFetching && !isReturning)
+    if (!mode_is_manual && !isFetching && !isReturning)
         g_command = 1;
 }
 
 void WRENCH()
 {
-    if (!isFetching && !isReturning)
+    if (!mode_is_manual && !isFetching && !isReturning)
         g_command = 2;
 }
 
 void SCREWDRIVER()
 {
-    if (!isFetching && !isReturning)
+    if (!mode_is_manual && !isFetching && !isReturning)
         g_command = 3;
 }
 
 void FETCH()
 {
-    if (0 < g_command && !isFetching && !isReturning)
+    if (!mode_is_manual && 0 < g_command && !isFetching && !isReturning)
     {
         out_val.tm = new Time();
         out_val.data = g_command;
@@ -213,7 +280,7 @@ void FETCH()
 
 void CANCEL()
 {
-    if (isFetching || isReturning)
+    if (!mode_is_manual && (isFetching || isReturning))
     {
         isCanceled = true;
         out_val.tm = new Time();
@@ -225,7 +292,7 @@ void CANCEL()
 
 void RETURN()
 {
-    if (0 < g_command && !isFetching && !isReturning)
+    if (!mode_is_manual && 0 < g_command && !isFetching && !isReturning)
     {
         out_val.tm = new Time();
         out_val.data = g_command * 10;

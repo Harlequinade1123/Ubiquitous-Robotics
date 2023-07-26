@@ -89,7 +89,7 @@ RTC::ReturnCode_t MotionPlanner::onActivated(RTC::UniqueId /*ec_id*/)
 {
   GRIPPER_CLOSE_ANGLE =  M_PI * 20 / 180;
   GRIPPER_OPEN_ANGLE  = -M_PI * 30 / 180;
-  GRIPPER_NORMAL_ANGLE = M_PI * 20 / 180;
+  GRIPPER_NORMAL_ANGLE = 0;
   BASE_NORMAL_ANGLE    = -M_PI_2;
   sendArmCommand(BASE_NORMAL_ANGLE, 145, 175, -M_PI_2, GRIPPER_NORMAL_ANGLE, 10);
   return RTC::RTC_OK;
@@ -109,6 +109,49 @@ RTC::ReturnCode_t MotionPlanner::onExecute(RTC::UniqueId /*ec_id*/)
     m_commandIn.read();
     received_command = m_command.data;
     printf("GET %d\n", m_command.data);
+
+    if (100 <= received_command)
+    {
+      sendArmCommand(BASE_NORMAL_ANGLE, 145, 175, -M_PI_2, GRIPPER_NORMAL_ANGLE);
+      if (100 == received_command)
+      {
+        sendRobotCommand(0, 0, 0);
+      }
+      else if (101 == received_command)
+      {
+        sendRobotCommand(0.3, 0, 0);
+      }
+      else if (102 == received_command)
+      {
+        sendRobotCommand(-0.3, 0, 0);
+      }
+      else if (103 == received_command)
+      {
+        sendRobotCommand(0, 0.3, 0);
+      }
+      else if (104 == received_command)
+      {
+        sendRobotCommand(0, -0.3, 0);
+      }
+      else if (105 == received_command)
+      {
+        sendRobotCommand(0, 0, M_PI_2);
+      }
+      else if (106 == received_command)
+      {
+        sendRobotCommand(0, 0, -M_PI_2);
+      }
+      else if (107 == received_command)
+      {
+        sendFetchCommand();
+      }
+      else if (108 == received_command)
+      {
+        sendReturnCommand();
+      }
+      usleep(50000);
+      return RTC::RTC_OK;
+    }
     
     // ツールの場所まで移動
     if (received_command % 10 == 1)
@@ -164,6 +207,15 @@ void MotionPlanner::sendRobotCommand(double x_vel, double y_vel, double anguler_
   m_wheel_velocityOut.write();
 }
 
+void MotionPlanner::sendRobotCommand(double x_vel, double y_vel, double anguler_vel)
+{
+  m_wheel_velocity.data.vx = x_vel;
+  m_wheel_velocity.data.vy = y_vel;
+  m_wheel_velocity.data.va = anguler_vel;
+  setTimestamp(m_wheel_velocity);
+  m_wheel_velocityOut.write();
+}
+
 void MotionPlanner::sendArmCommand(double base_angle, double x, double z, double posture, double gripper, int time_count_ms)
 {
   m_dynamixel_pose.data.length(5);
@@ -175,6 +227,18 @@ void MotionPlanner::sendArmCommand(double base_angle, double x, double z, double
   setTimestamp(m_dynamixel_pose);
   m_dynamixel_poseOut.write();
   usleep(time_count_ms * 1000);
+}
+
+void MotionPlanner::sendArmCommand(double base_angle, double x, double z, double posture, double gripper)
+{
+  m_dynamixel_pose.data.length(5);
+  m_dynamixel_pose.data[0] = base_angle;
+  m_dynamixel_pose.data[1] = x;
+  m_dynamixel_pose.data[2] = z;
+  m_dynamixel_pose.data[3] = posture;
+  m_dynamixel_pose.data[4] = gripper;
+  setTimestamp(m_dynamixel_pose);
+  m_dynamixel_poseOut.write();
 }
 
 void MotionPlanner::sendFetchCommand()
@@ -253,6 +317,8 @@ void MotionPlanner::sendReturnCommand()
   {
     sendArmCommand(BASE_NORMAL_ANGLE + M_PI - M_PI / 20 * i, 145, 175, -M_PI_2, GRIPPER_CLOSE_ANGLE, 50);
   }
+
+  sendArmCommand(BASE_NORMAL_ANGLE, 145, 175, -M_PI_2, GRIPPER_CLOSE_ANGLE, 1000);
 
   // ツールを置く
   for (int i = 1; i <= 50; i++)

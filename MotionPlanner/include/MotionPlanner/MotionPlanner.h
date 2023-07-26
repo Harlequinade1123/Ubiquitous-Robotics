@@ -275,7 +275,9 @@ class MotionPlanner
   // </rtc-template>
   int received_command;
   void sendRobotCommand(double x_vel, double y_vel, double anguler_vel, int time_count_ms);
+  void sendRobotCommand(double x_vel, double y_vel, double anguler_vel);
   void sendArmCommand(double base_angle, double x, double z, double posture, double gripper, int time_count_ms);
+  void sendArmCommand(double base_angle, double x, double z, double posture, double gripper);
   void sendFetchCommand();
   void sendReturnCommand();
   double GRIPPER_CLOSE_ANGLE;
