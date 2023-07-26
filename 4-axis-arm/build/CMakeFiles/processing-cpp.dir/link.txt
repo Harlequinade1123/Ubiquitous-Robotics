@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/processing-cpp.dir/src/main.cpp.o CMakeFiles/processing-cpp.dir/src/sketch.cpp.o CMakeFiles/processing-cpp.dir/src/psketch.cpp.o CMakeFiles/processing-cpp.dir/src/FourAxisArm.cpp.o  -o processing-cpp  -lGL -lGLU -lGLEW -lglfw /usr/lib/x86_64-linux-gnu/libGL.so 

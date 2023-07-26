@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/FourAxisArm.h
+math.h
+-
+iostream
+-
+
+/home/ntlab/test_cpp/4-axis-arm/src/FourAxisArm.cpp
+FourAxisArm.h
+/home/ntlab/test_cpp/4-axis-arm/src/FourAxisArm.h
+

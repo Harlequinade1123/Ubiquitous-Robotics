@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/ntlab/test_cpp/4-axis-arm/build",
+  "command": "/usr/bin/g++   -I/home/ntlab/test_cpp/4-axis-arm/include  -g   -std=gnu++14 -o CMakeFiles/processing-cpp.dir/src/main.cpp.o -c /home/ntlab/test_cpp/4-axis-arm/src/main.cpp",
+  "file": "/home/ntlab/test_cpp/4-axis-arm/src/main.cpp"
+},
+{
+  "directory": "/home/ntlab/test_cpp/4-axis-arm/build",
+  "command": "/usr/bin/g++   -I/home/ntlab/test_cpp/4-axis-arm/include  -g   -std=gnu++14 -o CMakeFiles/processing-cpp.dir/src/sketch.cpp.o -c /home/ntlab/test_cpp/4-axis-arm/src/sketch.cpp",
+  "file": "/home/ntlab/test_cpp/4-axis-arm/src/sketch.cpp"
+},
+{
+  "directory": "/home/ntlab/test_cpp/4-axis-arm/build",
+  "command": "/usr/bin/g++   -I/home/ntlab/test_cpp/4-axis-arm/include  -g   -std=gnu++14 -o CMakeFiles/processing-cpp.dir/src/psketch.cpp.o -c /home/ntlab/test_cpp/4-axis-arm/src/psketch.cpp",
+  "file": "/home/ntlab/test_cpp/4-axis-arm/src/psketch.cpp"
+},
+{
+  "directory": "/home/ntlab/test_cpp/4-axis-arm/build",
+  "command": "/usr/bin/g++   -I/home/ntlab/test_cpp/4-axis-arm/include  -g   -std=gnu++14 -o CMakeFiles/processing-cpp.dir/src/FourAxisArm.cpp.o -c /home/ntlab/test_cpp/4-axis-arm/src/FourAxisArm.cpp",
+  "file": "/home/ntlab/test_cpp/4-axis-arm/src/FourAxisArm.cpp"
+}
+]
